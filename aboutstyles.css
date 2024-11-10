@@ -1,0 +1,215 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #f4f4f9;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5em 1em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: 0.9em;
+}
+
+.brand h1 {
+    font-size: 20px;
+    color: #fff;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a, .download-btn {
+    color: #f4f4f9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header ul li a:hover, .download-btn:hover {
+    color: #feb47b;
+}
+
+
+.download-btn {
+    background: #ff7e5f;
+    padding: 0.4em 1em;
+    border-radius: 5px;
+    margin-left: 1em;
+    position: absolute;
+    right: 1em; 
+}
+
+
+.about-hero {
+    padding: 8em 0 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    position: relative;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    margin-top: 80px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-ring {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 4px solid #ff7e5f;
+    border-radius: 50%;
+    top: -15px;
+    left: -15px;
+    animation: rotateRing 5s linear infinite;
+}
+
+@keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.about-box {
+    max-width: 650px;
+    padding: 2em;
+    background: linear-gradient(135deg, #fff8e1, #ffd180);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1s ease-in-out, popEffect 0.5s ease-in-out 0.5s;
+    color: #333;
+}
+
+.about-box h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    color: #ff7e5f;
+    margin-bottom: 1em;
+    animation: pulse 1.5s infinite;
+}
+
+.about-box p, .about-box ul {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-box h3 {
+    font-size: 1.5em;
+    color: #ff5722;
+    margin-top: 1em;
+}
+
+.about-box ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.about-box ul li {
+    margin-bottom: 0.5em;
+}
+
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popEffect {
+    0% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+.social-media {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-media a {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.6em;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.social-media a:hover {
+    background: #ff7e5f;
+}
+
+.social-media i {
+    font-size: 1.5em;
+}
+
+
+@media (max-width: 768px) {
+    .social-media {
+        bottom: 10px;
+        right: 10px;
+    }
+}
