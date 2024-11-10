@@ -61,7 +61,7 @@ header ul li a:hover, .download-btn:hover {
 .animated-headline {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5em;
-    color: #ff7e5f;
+    color: #ba300d;
     animation: signatureAnimation 1.5s ease-out;
 }
 
